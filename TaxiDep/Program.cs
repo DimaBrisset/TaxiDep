@@ -17,36 +17,57 @@ namespace TaxiDep
             IFactory creator = new GasFactory();  
             IProduction car1 = creator.Create();
             IProduction car2 = creator.Create();
-            IProduction car3 = creator.Create();
-            IProduction car4 = creator.Create();
-            IProduction car5 = creator.Create();
-
+           
             creator =new TrackFactory();
-            IProduction truck=creator.Create();
+            IProduction truck1=creator.Create();
             IProduction truck2 = creator.Create();
 
             creator =new ElectroFactory();
-            IProduction electro=creator.Create();
+            IProduction electro1=creator.Create();
             IProduction electro2 = creator.Create();
 
-            List<IProduction> cars = new List<IProduction>() { car1,car2,car3,car4,car5};
-                     
-            
-            Car carservice = new Car(cars);
-
-            carservice.WithOutSortPrice();
-
-            //   carservice.SortPriceByAscending();
-
-            //    carservice.SortPriceByDescending();
-
-            //  carservice.PriceCar();
-
-            //   carservice.SortFuelByAscending();
-            // carservice.SortFuelByDescending();
+            List<IProduction> cars = new List<IProduction>() {  car1,truck1,electro1,};
+            Test carservice = new Test(cars);
 
 
-            carservice.SearchCarsSpeed( cars, 100, 200);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //  carservice.WithOutSortPrice();
+          //  carservice.SortFuelByAscending();
+           // carservice.SortFuelByDescending();
+
+
+           //carservice.SortPriceByAscending();
+          // carservice.SortPriceByDescending();
+
+          
+
+           //++  carservice.SortPriceByDescending();
+
+           //++  carservice.PriceCar();
+
+       
+         //++    carservice.SortFuelByDescending();
+
+
+          // carservice.SearchCarsSpeed( 100, 3000);
 
            
 
