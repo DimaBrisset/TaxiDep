@@ -17,8 +17,6 @@ namespace TaxiDep
 
 
 
-
-
         public Electro(string id, string model, int price, int fuelConsumption, FuelType fuelType, int speed)
         {
             _id = id;
@@ -37,7 +35,28 @@ namespace TaxiDep
             var car = new Electro(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
 
         }
+        public int GetPrice()
+        {
+            return _price;
+        }
+        public string GetModel()
+        {
+            return _model;
+        }
 
+        public int GetFuelConsumption()
+        {
+            return _fuelConsumption;
+        }
+        public int GetSpeed()
+        {
+            return _speed;
+        }
+
+        public string GetId()
+        {
+            return _id;
+        }
 
 
 
@@ -51,12 +70,6 @@ namespace TaxiDep
                 $"Speed: {_speed}\n";
         }
 
-
-      
-
-
-
-
-
+       
     }
 }

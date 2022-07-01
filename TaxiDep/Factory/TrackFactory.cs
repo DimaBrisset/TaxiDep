@@ -4,7 +4,6 @@ namespace TaxiDep
 {
     internal class TrackFactory: IFactory
     {
-
         private string _id;
         private string _model;
         private int _price;
@@ -12,6 +11,11 @@ namespace TaxiDep
         private FuelType _fuelType;
         private int _speed;
 
+        public string Id => _id;
+        public string Model => _model;
+        public int Price => _price;
+        public int FuelConsumption => _fuelConsumption;
+        public int Speed => _speed;
 
         public TrackFactory(string id, string model, int price, int fuelConsumption, FuelType fuelType, int speed)
         {
@@ -35,7 +39,6 @@ namespace TaxiDep
             _speed = 0;
         }
 
-
         public IProduction Create()
         {
 
@@ -54,20 +57,6 @@ namespace TaxiDep
         }
 
 
-
-
-        public  int GetPrice()
-        {
-            return _price;
-        }
-        public  int GetFuelConsumption()
-        {
-            return _fuelConsumption;
-        }
-        public  int GetSpeed()
-        {
-            return _speed;
-        }
 
 
 

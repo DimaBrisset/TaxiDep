@@ -16,6 +16,11 @@ namespace TaxiDep
         private FuelType _fuelType;
         private int _speed;
 
+        public string Id => _id;
+        public string Model => _model;
+        public int Price => _price;
+        public int FuelConsumption => _fuelConsumption;
+        public int Speed => _speed;
 
         public ElectroFactory(string id, string model, int price, int fuelConsumption, FuelType fuelType, int speed)
         {
@@ -40,7 +45,7 @@ namespace TaxiDep
         }
 
 
-        public  IProduction Create()
+        public IProduction Create()
         {
 
             _id = CarsParametrs.Id();
@@ -58,19 +63,6 @@ namespace TaxiDep
 
 
 
-
-        public int GetPrice()
-        {
-            return _price;
-        }
-        public int GetFuelConsumption()
-        {
-            return _fuelConsumption;
-        }
-        public  int GetSpeed()
-        {
-            return _speed;
-        }
 
 
 

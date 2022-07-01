@@ -15,9 +15,11 @@ namespace TaxiDep
         static void Main(string[] args)
         {
             IFactory creator = new GasFactory();  
-            IProduction car = creator.Create();
+            IProduction car1 = creator.Create();
             IProduction car2 = creator.Create();
-                     
+            IProduction car3 = creator.Create();
+            IProduction car4 = creator.Create();
+            IProduction car5 = creator.Create();
 
             creator =new TrackFactory();
             IProduction truck=creator.Create();
@@ -27,32 +29,32 @@ namespace TaxiDep
             IProduction electro=creator.Create();
             IProduction electro2 = creator.Create();
 
-            List<IProduction> cars = new List<IProduction>() { car,car2 };
+            List<IProduction> cars = new List<IProduction>() { car1,car2,car3,car4,car5};
+                     
+            
+            Car carservice = new Car(cars);
 
-            foreach (var item in cars)
-            {
-                Console.WriteLine(item);
-            }
+            carservice.WithOutSortPrice();
 
+            //   carservice.SortPriceByAscending();
 
-         GasFactory carservice = new GasFactory(cars);
-            carservice.Ascending();
+            //    carservice.SortPriceByDescending();
 
+            //  carservice.PriceCar();
 
-
-
-
-
-
+            //   carservice.SortFuelByAscending();
+            // carservice.SortFuelByDescending();
 
 
+            carservice.SearchCarsSpeed( cars, 100, 200);
 
-            //Console.WriteLine(car);
-            //Console.WriteLine(car2);
-            //Console.WriteLine(bas);
-            //Console.WriteLine(bas2);
-            //Console.WriteLine(electro);
-            //Console.WriteLine(electro2);
+           
+
+
+
+
+
+
 
 
 
@@ -61,6 +63,10 @@ namespace TaxiDep
 
 
         }
+
+
+
+
     }
 }
 
