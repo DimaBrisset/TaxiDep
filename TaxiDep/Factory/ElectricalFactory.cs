@@ -34,10 +34,10 @@
         public IProduction Create()
         {
             _id = CarsParametrs.Id();
-            _model = CarsParametrs.ModelsElectro();
+            _model = CarsParametrs.ModelsElectrical();
             _price = CarsParametrs.Price();
             _fuelConsumption = CarsParametrs.Consumption();
-            _fuelType = FuelType.Deisel;
+            _fuelType = FuelType.Diesel;
             _speed = CarsParametrs.Speed();
 
             Electro car = new Electro(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
