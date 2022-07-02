@@ -21,7 +21,7 @@ namespace TaxiDep
 
             List<IProduction> cars = new() { car1, car2, truck1, truck2, electric1, electric2 };
             Calculation.Calculation carCalculation = new(cars);
-
+             
 
             UserMenu.UserChoices(carCalculation);
         }
