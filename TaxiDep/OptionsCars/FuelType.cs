@@ -1,4 +1,4 @@
-﻿namespace TaxiDep
+﻿namespace TaxiDep.CarsOptions
 
 {
     internal enum FuelType

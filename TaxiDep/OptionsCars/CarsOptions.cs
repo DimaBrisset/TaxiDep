@@ -1,7 +1,7 @@
-﻿namespace TaxiDep
+﻿namespace TaxiDep.CarsOptions
 
 {
-    public class CarsParametrs
+    public class CarOptions
     {
         public static string Battery()
         {
