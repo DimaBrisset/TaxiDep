@@ -1,6 +1,6 @@
 ﻿namespace TaxiDep
 {
-    internal class ElectroFactory : IFactory
+    internal class ElectricalFactory : IFactory
     {
         private string _id;
         private string _model;
@@ -9,9 +9,7 @@
         private FuelType _fuelType;
         private int _speed;
 
-     
-
-        public ElectroFactory(string id, string model, int price, int fuelConsumption, FuelType fuelType, int speed)
+        public ElectricalFactory(string id, string model, int price, int fuelConsumption, FuelType fuelType, int speed)
         {
             _id = id;
             _model = model;
@@ -21,7 +19,7 @@
             _speed = speed;
         }
 
-        public ElectroFactory()
+        public ElectricalFactory()
         {
             _id = Guid.NewGuid().ToString();
             _model = "NO MODEL";

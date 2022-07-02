@@ -9,7 +9,6 @@
         private FuelType _fuelType;
         private int _speed;
 
-
         public TrackFactory(string id, string model, int price, int fuelConsumption, FuelType fuelType, int speed)
         {
             _id = id;
@@ -36,7 +35,7 @@
             _model = CarsParametrs.ModelsTruck();
             _price = CarsParametrs.Price();
             _fuelConsumption = CarsParametrs.Consumption();
-            _fuelType = FuelType.Deisel;
+            _fuelType = FuelType.Diesel;
             _speed = CarsParametrs.Speed();
 
             Truck car = new Truck(_id, _model, _price, _fuelConsumption, _fuelType, _speed);

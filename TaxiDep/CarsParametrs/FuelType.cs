@@ -1,10 +1,10 @@
 ﻿namespace TaxiDep
 
 {
-    enum FuelType
+    internal enum FuelType
     {
         Gas,
-        Deisel,
+        Diesel,
         Battery,
     }
 }

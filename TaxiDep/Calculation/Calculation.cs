@@ -6,10 +6,10 @@
 
         public Calculation(List<IProduction> cars)
         {
-            _allCars = cars ?? new List<IProduction>();
+            _allCars = cars;
         }
 
-        public int GetCarsCount()
+        private int GetCarsCount()
         {
             return _allCars.Count;
         }
@@ -19,35 +19,42 @@
             Console.WriteLine($"We have {GetCarsCount()} cars");
 
 
-            for (int i = 0; i < _allCars.Count; i++)
+            foreach (IProduction cars in _allCars)
             {
-                Console.WriteLine(_allCars[i].ToString());
+                Console.WriteLine(cars.ToString());
             }
         }
 
         public void SortPriceByDescending()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             _allCars.Sort((x, y) => x.GetPrice().CompareTo(y.GetPrice()));
             _allCars.Reverse();
-            for (int i = 0; i < _allCars.Count; i++)
+            foreach (IProduction cars in _allCars)
             {
-                Console.WriteLine(_allCars[i].ToString());
+                Console.WriteLine(cars.ToString());
             }
+
+            Console.ResetColor();
         }
 
         public void SortPriceByAscending()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             _allCars.Sort((x, y) => x.GetPrice().CompareTo(y.GetPrice()));
             _allCars.Reverse();
             _allCars.Reverse();
-            for (int i = 0; i < _allCars.Count; i++)
+            foreach (IProduction cars in _allCars)
             {
-                Console.WriteLine(_allCars[i].ToString());
+                Console.WriteLine(cars.ToString());
             }
+
+            Console.ResetColor();
         }
 
         public void SortFuelByAscending()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Car[] carsCopy = new Car[_allCars.Count];
             _allCars.Sort((x, y) => x.GetFuelConsumption().CompareTo(y.GetFuelConsumption()));
             _allCars.Reverse();
@@ -56,38 +63,49 @@
             {
                 Console.WriteLine(_allCars[i].ToString());
             }
+
+            Console.ResetColor();
         }
 
         public void SortFuelByDescending()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             _allCars.Sort((x, y) => x.GetFuelConsumption().CompareTo(y.GetFuelConsumption()));
             _allCars.Reverse();
-            for (int i = 0; i < _allCars.Count; i++)
+            foreach (IProduction cars in _allCars)
             {
-                Console.WriteLine(_allCars[i].ToString());
+                Console.WriteLine(cars.ToString());
             }
+
+            Console.ResetColor();
         }
 
         public void PriceCar()
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             int sum = 0;
-            for (int i = 0; i < _allCars.Count; i++)
+            foreach (IProduction cars in _allCars)
             {
-                sum = sum + _allCars[i].GetPrice();
+                sum = sum + cars.GetPrice();
             }
 
             Console.WriteLine(sum);
+            Console.ResetColor();
         }
 
         public void SearchCarsSpeed(int minPrice, int maxPrice)
         {
+            int carsCount = 0;
             Console.WriteLine("Search Auto speed");
-            foreach (var car in _allCars)
+            foreach (IProduction car in _allCars.Where(car => car.GetSpeed() >= minPrice && car.GetSpeed() <= maxPrice))
             {
-                if (car.GetSpeed() >= minPrice && car.GetSpeed() <= maxPrice)
-                {
-                    Console.WriteLine(car);
-                }
+                Console.WriteLine(car);
+                carsCount++;
+            }
+
+            if (carsCount == 0)
+            {
+                Console.WriteLine("Auto Not Found\n");
             }
         }
     }

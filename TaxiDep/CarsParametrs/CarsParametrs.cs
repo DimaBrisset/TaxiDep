@@ -3,13 +3,13 @@
 {
     public class CarsParametrs
     {
-        public static string Battary()
+        public static string Battery()
         {
-            string[] battary = new string[] {"LiIon", "AluminumIon", " LithiumSulfur", " MetalAir"};
+            string[] battery = new string[] {"LiIon", "AluminumIon", " LithiumSulfur", " MetalAir"};
             Random random = new Random();
-            var choiceBattary = battary[random.Next(0, battary.Length)];
+            var choiceBattery = battery[random.Next(0, battery.Length)];
 
-            return choiceBattary;
+            return choiceBattery;
         }
 
         public static string ModelsOrdinary()
@@ -33,13 +33,14 @@
             return choiceModels;
         }
 
-        public static string ModelsElectro()
+        public static string ModelsElectrical()
         {
             Random random = new Random();
             string[] models = new string[]
             {
-                " Audi(Electro)", "Acura(Electro)", "  AlfaRomeo(Electro)", " Bentley(Electro)", "Toyota(Electro)",
-                "Suzuki(Electro)", "Lexus(Electro)", " Mazda(Electro)"
+                " Audi(Electrical)", "Acura(Electrical)", "  AlfaRomeo(Electrical)", " Bentley(Electrical)",
+                "Toyota(Electrical)",
+                "Suzuki(Electrical)", "Lexus(Electrical)", " Mazda(Electrical)"
             };
             var choiceModels = models[random.Next(0, models.Length)];
             return choiceModels;
