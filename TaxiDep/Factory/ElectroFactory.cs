@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-namespace TaxiDep
+﻿namespace TaxiDep
 {
     internal class ElectroFactory : IFactory
     {
@@ -30,8 +23,6 @@ namespace TaxiDep
             _fuelConsumption = fuelConsumption;
             _fuelType = fuelType;
             _speed = speed;
-
-
         }
 
         public ElectroFactory()
@@ -44,10 +35,8 @@ namespace TaxiDep
             _speed = 0;
         }
 
-
         public IProduction Create()
         {
-
             _id = CarsParametrs.Id();
             _model = CarsParametrs.ModelsElectro();
             _price = CarsParametrs.Price();
@@ -57,17 +46,6 @@ namespace TaxiDep
 
             Electro car = new Electro(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
             return car;
-
-
         }
-
-
-
-
-
-
-
-
-
     }
 }

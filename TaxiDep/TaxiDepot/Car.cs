@@ -1,18 +1,13 @@
-﻿
-namespace TaxiDep
+﻿namespace TaxiDep
 {
     internal class Car : IProduction
     {
-        
-        private string _id="";
-        private string _model="";
+        private string _id ;
+        private string _model ;
         private int _price;
         private int _fuelConsumption;
         private FuelType _fuelType;
         private int _speed;
-
-      
-        
 
         public Car(string id, string model, int price, int fuelConsumption, FuelType fuelType, int speed)
         {
@@ -24,10 +19,6 @@ namespace TaxiDep
             _speed = speed;
         }
 
-
-       
-
-
         public void Releasse()
         {
             var car = new Car(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
@@ -37,6 +28,7 @@ namespace TaxiDep
         {
             return _price;
         }
+
         public string GetModel()
         {
             return _model;
@@ -46,6 +38,7 @@ namespace TaxiDep
         {
             return _fuelConsumption;
         }
+
         public int GetSpeed()
         {
             return _speed;
@@ -65,6 +58,5 @@ namespace TaxiDep
                 $"Fuel Type: {_fuelType}\n" +
                 $"Speed: {_speed}\n";
         }
-
     }
 }

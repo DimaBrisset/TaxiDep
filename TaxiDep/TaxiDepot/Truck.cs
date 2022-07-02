@@ -1,5 +1,4 @@
-﻿
-namespace TaxiDep
+﻿namespace TaxiDep
 {
     internal class Truck : IProduction
     {
@@ -10,32 +9,26 @@ namespace TaxiDep
         private FuelType _fuelType;
         private int _speed;
 
-
-
         public Truck(string id, string model, int price, int fuelConsumption, FuelType fuelType, int speed)
         {
             _id = id;
             _model = model;
             _price = price;
             _fuelConsumption = fuelConsumption;
-            _fuelType = FuelType.Deisel;
+            _fuelType = fuelType;
             _speed = speed;
         }
 
-
-
-    
-
         public void Releasse()
         {
-            var car = new Truck(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
-
+            new Truck(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
         }
 
         public int GetPrice()
         {
             return _price;
         }
+
         public string GetModel()
         {
             return _model;
@@ -45,6 +38,7 @@ namespace TaxiDep
         {
             return _fuelConsumption;
         }
+
         public int GetSpeed()
         {
             return _speed;
@@ -64,12 +58,5 @@ namespace TaxiDep
                 $"Fuel Type: {_fuelType}\n" +
                 $"Speed: {_speed}\n";
         }
-
-    
-
-
-
-
-
     }
 }

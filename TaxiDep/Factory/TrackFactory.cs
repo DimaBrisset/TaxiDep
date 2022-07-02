@@ -1,8 +1,6 @@
-﻿
-
-namespace TaxiDep
+﻿namespace TaxiDep
 {
-    internal class TrackFactory: IFactory
+    internal class TrackFactory : IFactory
     {
         private string _id;
         private string _model;
@@ -25,8 +23,6 @@ namespace TaxiDep
             _fuelConsumption = fuelConsumption;
             _fuelType = fuelType;
             _speed = speed;
-
-
         }
 
         public TrackFactory()
@@ -41,8 +37,6 @@ namespace TaxiDep
 
         public IProduction Create()
         {
-
-
             _id = CarsParametrs.Id();
             _model = CarsParametrs.ModelsTruck();
             _price = CarsParametrs.Price();
@@ -50,15 +44,8 @@ namespace TaxiDep
             _fuelType = FuelType.Deisel;
             _speed = CarsParametrs.Speed();
 
-             Truck car = new Truck(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
+            Truck car = new Truck(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
             return car;
-
-
         }
-
-
-
-
-
     }
 }

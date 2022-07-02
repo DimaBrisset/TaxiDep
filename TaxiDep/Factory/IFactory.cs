@@ -1,18 +1,7 @@
-﻿
-
-namespace TaxiDep
+﻿namespace TaxiDep
 {
-   interface IFactory
+    interface IFactory
     {
-        public  IProduction Create();
-        
-
-
-
-
-
-
-
-
+        public IProduction Create();
     }
 }

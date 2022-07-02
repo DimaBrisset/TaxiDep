@@ -1,14 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json;
-using System.IO;
-using System.Xml;
-using System.Xml.Serialization;
-using System.Xml.Linq;
-
-
-
-namespace TaxiDep
+﻿namespace TaxiDep
 {
     class Program
     {
@@ -26,14 +16,13 @@ namespace TaxiDep
             IProduction electro1 = creator.Create();
             IProduction electro2 = creator.Create();
 
-            List<IProduction> cars = new List<IProduction>() {car1,car2, truck1, truck2, electro1,electro2};
+            List<IProduction> cars = new List<IProduction>() {car1, car2, truck1, truck2, electro1, electro2};
             Calculation carservice = new Calculation(cars);
 
 
             bool exit = false;
             do
             {
-
                 Console.WriteLine("Button # 1, Show all AUTO");
                 Console.WriteLine("Button # 2, Сost of all cars");
                 Console.WriteLine("Button # 3, Sort Fuel By Ascending");
@@ -42,7 +31,6 @@ namespace TaxiDep
                 Console.WriteLine("Button # 6, Sort Price By Descending");
                 Console.WriteLine("Button # 7, Search Cars Speed");
                 Console.WriteLine("Button # 0, Exit");
-
 
 
                 var choices = (Console.ReadLine());
@@ -84,15 +72,7 @@ namespace TaxiDep
                         exit = true;
                         break;
                 }
-
-            }
-            while (!exit);
-
-
-
-
-
-
+            } while (!exit);
 
 
             static int UserInputNumber()
@@ -111,14 +91,6 @@ namespace TaxiDep
 
                 return staded;
             }
-
-
-
-
-
-
         }
     }
 }
-
-

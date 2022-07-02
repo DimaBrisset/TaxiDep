@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TaxiDep
+﻿namespace TaxiDep
 {
-    internal class Electro: IProduction
+    internal class Electro : IProduction
     {
         private string _id;
         private string _model;
@@ -14,8 +8,6 @@ namespace TaxiDep
         private int _fuelConsumption;
         private FuelType _fuelType;
         private int _speed;
-
-
 
         public Electro(string id, string model, int price, int fuelConsumption, FuelType fuelType, int speed)
         {
@@ -27,18 +19,16 @@ namespace TaxiDep
             _speed = speed;
         }
 
-
-
-
         public void Releasse()
         {
             var car = new Electro(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
-
         }
+
         public int GetPrice()
         {
             return _price;
         }
+
         public string GetModel()
         {
             return _model;
@@ -48,6 +38,7 @@ namespace TaxiDep
         {
             return _fuelConsumption;
         }
+
         public int GetSpeed()
         {
             return _speed;
@@ -58,8 +49,6 @@ namespace TaxiDep
             return _id;
         }
 
-
-
         public override string ToString()
         {
             return $"ID: {_id}\n" +
@@ -69,7 +58,5 @@ namespace TaxiDep
                 $"Fuel Type: {_fuelType}\n" +
                 $"Speed: {_speed}\n";
         }
-
-       
     }
 }
