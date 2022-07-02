@@ -3,7 +3,7 @@ using TaxiDep.Menu;
 
 namespace TaxiDep
 {
-    internal static class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
@@ -19,7 +19,7 @@ namespace TaxiDep
             IProduction electric1 = creator.Create();
             IProduction electric2 = creator.Create();
 
-            List<IProduction> cars = new() {car1, car2, truck1, truck2, electric1, electric2};
+            List<IProduction> cars = new() { car1, car2, truck1, truck2, electric1, electric2 };
             Calculation.Calculation carCalculation = new(cars);
 
 
