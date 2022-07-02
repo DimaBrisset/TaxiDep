@@ -9,11 +9,7 @@
         private FuelType _fuelType;
         private int _speed;
 
-        public string Id => _id;
-        public string Model => _model;
-        public int Price => _price;
-        public int FuelConsumption => _fuelConsumption;
-        public int Speed => _speed;
+     
 
         public ElectroFactory(string id, string model, int price, int fuelConsumption, FuelType fuelType, int speed)
         {

@@ -9,11 +9,15 @@
         private FuelType _fuelType;
         private int _speed;
 
-        public string Id => _id;
-        public string Model => _model;
-        public int Price => _price;
-        public int FuelConsumption => _fuelConsumption;
-        public int Speed => _speed;
+        public GasFactory(string id, string model, int price, int fuelConsumption, FuelType fuelType, int speed)
+        {
+            _id = id;
+            _model = model;
+            _price = price;
+            _fuelConsumption = fuelConsumption;
+            _fuelType = fuelType;
+            _speed = speed;
+        }
 
         public GasFactory()
         {
