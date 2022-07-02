@@ -1,4 +1,6 @@
-﻿namespace TaxiDep
+﻿using TaxiDep.OptionsCars;
+
+namespace TaxiDep
 {
     internal class Electro : IProduction
     {

@@ -1,4 +1,4 @@
-﻿namespace TaxiDep
+﻿namespace TaxiDep.Calculation
 {
     internal class Calculation
     {
@@ -86,7 +86,7 @@
             int sum = 0;
             foreach (IProduction cars in _allCars)
             {
-                sum = sum + cars.GetPrice();
+                sum += cars.GetPrice();
             }
 
             Console.WriteLine(sum);

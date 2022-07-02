@@ -1,4 +1,6 @@
-﻿namespace TaxiDep
+﻿using TaxiDep.OptionsCars;
+
+namespace TaxiDep.Factory
 {
     internal class GasFactory : IFactory
     {
@@ -31,14 +33,14 @@
 
         public IProduction Create()
         {
-            _id = CarsParametrs.Id();
-            _model = CarsParametrs.ModelsOrdinary();
-            _price = CarsParametrs.Price();
-            _fuelConsumption = CarsParametrs.Consumption();
+            _id = CarsOptions.Id();
+            _model = CarsOptions.ModelsOrdinary();
+            _price = CarsOptions.Price();
+            _fuelConsumption = CarsOptions.Consumption();
             _fuelType = FuelType.Gas;
-            _speed = CarsParametrs.Speed();
+            _speed = CarsOptions.Speed();
 
-            Car car = new Car(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
+            Car car = new(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
             return car;
         }
     }

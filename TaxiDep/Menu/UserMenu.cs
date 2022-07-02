@@ -1,8 +1,8 @@
-﻿namespace TaxiDep
+﻿namespace TaxiDep.Menu
 {
     internal static class UserMenu
     {
-        public static void UserChoices(Calculation carService)
+        public static void UserChoices(Calculation.Calculation carService)
         {
             ShowMenu();
 
@@ -59,22 +59,22 @@
         {
             Console.Write("InputSpeed: ");
             string? checkStated = Console.ReadLine();
-            bool isSuccessful = int.TryParse(checkStated, out int staded);
+            bool isSuccessful = int.TryParse(checkStated, out int stated);
             while (!isSuccessful)
             {
                 Console.WriteLine("Error");
                 Console.Write("InputSpeed: ");
                 checkStated = Console.ReadLine();
-                isSuccessful = int.TryParse(checkStated, out staded);
+                isSuccessful = int.TryParse(checkStated, out stated);
             }
 
-            return staded;
+            return stated;
         }
 
         private static void ShowMenu()
         {
             Console.WriteLine("Button # 1, Show all AUTO");
-            Console.WriteLine("Button # 2, Сost of all cars");
+            Console.WriteLine("Button # 2, Cost of all cars");
             Console.WriteLine("Button # 3, Sort Fuel By Ascending");
             Console.WriteLine("Button # 4, Sort Fuel By Descending");
             Console.WriteLine("Button # 5, Sort Price By Ascending");

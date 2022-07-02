@@ -1,4 +1,6 @@
-﻿namespace TaxiDep
+﻿using TaxiDep.OptionsCars;
+
+namespace TaxiDep.Factory
 {
     internal class TrackFactory : IFactory
     {
@@ -31,14 +33,14 @@
 
         public IProduction Create()
         {
-            _id = CarsParametrs.Id();
-            _model = CarsParametrs.ModelsTruck();
-            _price = CarsParametrs.Price();
-            _fuelConsumption = CarsParametrs.Consumption();
+            _id = CarsOptions.Id();
+            _model = CarsOptions.ModelsTruck();
+            _price = CarsOptions.Price();
+            _fuelConsumption = CarsOptions.Consumption();
             _fuelType = FuelType.Diesel;
-            _speed = CarsParametrs.Speed();
+            _speed = CarsOptions.Speed();
 
-            Truck car = new Truck(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
+            Truck car = new(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
             return car;
         }
     }

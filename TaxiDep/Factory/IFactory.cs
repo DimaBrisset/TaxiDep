@@ -1,4 +1,4 @@
-﻿namespace TaxiDep
+﻿namespace TaxiDep.Factory
 {
     interface IFactory
     {
