@@ -2,7 +2,7 @@
 {
     internal interface IProduction
     {
-        void Releasse();
+        void Release();
         string GetId();
         string GetModel();
         int GetPrice();

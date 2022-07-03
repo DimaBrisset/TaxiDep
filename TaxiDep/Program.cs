@@ -10,7 +10,7 @@ namespace TaxiDep
             IFactory creator = new GasFactory();
             IProduction car1 = creator.Create();
             IProduction car2 = creator.Create();
-
+           
             creator = new TrackFactory();
             IProduction truck1 = creator.Create();
             IProduction truck2 = creator.Create();

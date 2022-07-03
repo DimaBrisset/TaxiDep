@@ -4,12 +4,12 @@ namespace TaxiDep
 {
     internal class Truck : IProduction
     {
-        private string _id;
-        private string _model;
-        private int _price;
-        private int _fuelConsumption;
-        private FuelType _fuelType;
-        private int _speed;
+        private readonly string _id;
+        private readonly string _model;
+        private readonly int _price;
+        private readonly int _fuelConsumption;
+        private readonly FuelType _fuelType;
+        private readonly int _speed;
 
         public Truck(string id, string model, int price, int fuelConsumption, FuelType fuelType, int speed)
         {
@@ -21,9 +21,9 @@ namespace TaxiDep
             _speed = speed;
         }
 
-        public void Releasse()
+        public void Release()
         {
-            new Truck(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
+            _ = new Truck(_id, _model, _price, _fuelConsumption, _fuelType, _speed);
         }
 
         public int GetPrice()
